@@ -10,7 +10,7 @@ from localflavor.us.forms import USStateField, USPhoneNumberField, USZipCodeFiel
 #-------------------------------------------------------------------------------
 
 # all model imports related to this project
-from models import *
+from .models import *
 
 class LoginForm(forms.Form):
     username = forms.CharField(max_length=20)
