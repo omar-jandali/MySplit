@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import User, UserManager
-from localflavor.us.models import USStateField, USZipCodeField
 
 # the following is the users profile model
 class Profile(models.Model):
@@ -12,8 +11,8 @@ class Profile(models.Model):
     # users location
     street = models.CharField(max_length=200, default='street address')
     city = models.CharField(max_length=100, default='city')
-    state = USStateField(default='CA')
-    zip_code = USZipCodeField(default=12345)
+    state = models.CharField(max_length=22, default='CA')
+    zip_code = models.IntegerField(default=12345)
     # users other profile info
     phone = models.IntegerField(default="000-ooo-oooo")
     dob = models.DateField(default='1950-01-01')

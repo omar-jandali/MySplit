@@ -3,7 +3,6 @@ from django.forms import ModelForm
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.utils.translation import ugettext_lazy as _
-from localflavor.us.forms import USStateField, USPhoneNumberField, USZipCodeField
 
 #-------------------------------------------------------------------------------
 # USER FORMS's
